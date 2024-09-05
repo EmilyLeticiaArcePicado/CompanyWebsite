@@ -1,0 +1,190 @@
+.image {
+    position: relative;
+    display: inline-block;
+    border: 0;
+    outline: 0;
+}
+
+.image img {
+    display: block;
+    width: 100%;
+}
+
+.image.fit {
+    display: block;
+    width: 100%;
+}
+
+.image.featured {
+    display: block;
+    width: 100%;
+    margin: 0 0 4em 0;
+}
+
+.image.left {
+    float: left;
+    margin: 0 2em 2em 0;
+}
+
+.image.centered {
+    display: block;
+    margin: 0 0 2em 0;
+}
+
+.image.centered img {
+    margin: 0 auto;
+    width: auto;
+}
+
+
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    padding: 2em 0 2em 0;
+    margin-bottom: 0;
+
+}
+
+.reel {
+    white-space: nowrap;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 2em 0 2em;
+    transition: transform 0.5s ease-in-out;
+}
+
+
+article {
+    display: inline-block;
+    width: 18em;
+    background: #fff;
+    text-align: center;
+    padding: 0 1em 3em 1em;
+    margin: 0 2em 0 0;
+    white-space: normal;
+    opacity: 1.0;
+    transition: opacity 0.75s ease-in-out;
+}
+
+
+.carousel .forward,
+.carousel .backward {
+    position: absolute;
+    top: 50%;
+    width: 6em;
+    height: 12em;
+    margin-top: -6em;
+    cursor: pointer;
+}
+
+.carousel .forward:before, .carousel .backward:before {
+    content: '';
+    display: block;
+    width: 6em;
+    height: 6em;
+    border-radius: 100%;
+    background-color: rgba(72, 57, 73, 0.5);
+    position: absolute;
+    top: 50%;
+    margin-top: -3em;
+    transition: background-color 0.35s ease-in-out; /* Transición suave para el color de fondo */
+}
+
+.carousel .forward:after,
+.carousel .backward:after {
+    content: '';
+    width: 3em;
+    height: 3em;
+    position: absolute;
+    top: 50%;
+    margin: -1.5em 0 0 0;
+    background: url("../Img/arrow.svg") no-repeat center center;
+}
+
+.carousel .forward:after {
+    right: 1em; /* Ajuste para centrar la flecha en la flecha hacia adelante */
+}
+
+.carousel .forward:hover:before,
+.carousel .backward:hover:before {
+    background-color: rgba(239, 131, 118, 0.75);
+}
+
+.carousel .forward {
+    right: 0;
+}
+
+.carousel .forward:before {
+    right: -3em;
+}
+
+.carousel .forward:after {
+    right: -0.25em;
+}
+
+
+
+
+
+.carousel article.loading {
+    opacity: 0;
+}
+
+.carousel article .image {
+    position: relative;
+    left: -1em;
+    top: 0;
+    width: auto;
+    margin-right: -2em;
+    margin-bottom: 3em;
+}
+
+.carousel article p {
+    text-align: center;
+}
+
+.carousel .forward:before {
+    right: -3em;
+}
+
+.carousel .forward:before,
+.carousel .backward:before {
+    content: '';
+    display: block;
+    width: 6em;
+    height: 6em;
+    border-radius: 100%;
+    background-color: rgba(72, 57, 73, 0.5);
+    position: absolute;
+    top: 50%;
+    margin-top: -3em;
+    -moz-transition: background-color 0.35s ease-in-out;
+    -webkit-transition: background-color 0.35s ease-in-out;
+    -o-transition: background-color 0.35s ease-in-out;
+    -ms-transition: background-color 0.35s ease-in-out;
+    transition: background-color 0.35s ease-in-out;
+    -webkit-backface-visibility: hidden;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.carousel .forward,
+.carousel .backward {
+    position: absolute;
+    top: 50%;
+    width: 6em;
+    height: 12em;
+    margin-top: -6em;
+    cursor: pointer;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}

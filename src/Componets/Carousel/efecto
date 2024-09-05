@@ -1,0 +1,128 @@
+/* Estilos generales para las imágenes */
+.image {
+    position: relative;
+    display: inline-block;
+    border: 0;
+    outline: 0;
+}
+
+.image img {
+    display: block;
+    width: 100%;
+}
+
+.image.fit {
+    display: block;
+    width: 100%;
+}
+
+.image.featured {
+    display: block;
+    width: 100%;
+    margin: 0 0 4em 0;
+}
+
+.image.left {
+    float: left;
+    margin: 0 2em 2em 0;
+}
+
+.image.centered {
+    display: block;
+    margin: 0 0 2em 0;
+}
+
+.image.centered img {
+    margin: 0 auto;
+    width: auto;
+}
+
+/* Estilos del carrusel */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    padding: 2em 0;
+    margin-bottom: 0;
+}
+
+/* Estilos para la caja de imágenes del carrusel */
+.reel {
+    display: flex; /* Usar flex para alinear horizontalmente las imágenes */
+    transition: transform 0.5s ease-in-out; /* Transición suave para el desplazamiento */
+}
+
+/* Estilos para los artículos dentro del carrusel */
+article {
+    min-width: 100%; /* Cada artículo ocupa el 100% del contenedor del carrusel */
+    background: #fff;
+    text-align: center;
+    padding: 0 1em 3em 1em;
+    margin: 0 0; /* Eliminado margen para evitar espaciado no deseado */
+    white-space: normal;
+    opacity: 1.0;
+    transition: opacity 0.75s ease-in-out; /* Transición suave para la opacidad */
+}
+
+/* Estilos de las flechas de navegación */
+.carousel .forward, .carousel .backward {
+    position: absolute;
+    top: 50%;
+    width: 6em;
+    height: 12em;
+    margin-top: -6em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel .forward {
+    right: 0;
+}
+
+.carousel .backward {
+    left: 0;
+}
+
+.carousel .forward:before, .carousel .backward:before {
+    content: '';
+    display: block;
+    width: 6em;
+    height: 6em;
+    border-radius: 100%;
+    background-color: rgba(72, 57, 73, 0.5);
+    position: absolute;
+    top: 50%;
+    margin-top: -3em;
+    transition: background-color 0.35s ease-in-out; /* Transición suave para el color de fondo */
+}
+
+.carousel .forward:after, .carousel .backward:after {
+    content: '';
+    width: 3em;
+    height: 3em;
+    position: absolute;
+    background: url("../Img/arrow.svg") no-repeat center center;
+    background-size: contain; /* Asegura que la imagen de la flecha se ajuste */
+}
+
+/* Estilos de las flechas al pasar el ratón */
+.carousel .forward:hover:before, .carousel .backward:hover:before {
+    background-color: rgba(239, 131, 118, 0.75);
+}
+
+/* Ajuste adicional para mejorar la apariencia de las flechas */
+.carousel .forward:after {
+    right: 1em; /* Ajuste para centrar la flecha en la flecha hacia adelante */
+}
+
+.carousel .backward:after {
+    left: 1em; /* Ajuste para centrar la flecha en la flecha hacia atrás */
+}
+
+/* Ajustes para el box-sizing */
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
